@@ -25,17 +25,23 @@ console.log(biggerWord);
 // exercício 4
 console.log('Exercício 4');
 
-let numerosPrimos = [];
+let numeros = [];
+let numerosPrimos = [1, 2];
 let maiorPrimo = 0;
 
-for(let index3 = 0; index3 <= 50; index3 += 1) {
-    if (index3 % 2 !== 0 && index3 % 3 !== 0 && index3 % 5 !== 0 && index3 % 7 !== 0) {
-        numerosPrimos.push(index3);
+for(let index3 = 1; index3 <= 5; index3 += 1) {
+    for(let index4 = 1; index4 <= numerosPrimos.length; index4 += 1) {
+        if (index3 % numerosPrimos[index4 - 1] === 0) {
+
+        } else {
+            numerosPrimos.push(index3);
+        }
     }
 }
-for(let index4 = 0; index4 < numerosPrimos.length; index4 += 1) {
-    if (maiorPrimo < numerosPrimos[index4]) {
-        maiorPrimo = numerosPrimos[index4];
+
+for(let index5 = 0; index5 < numerosPrimos.length; index5 += 1) {
+    if (maiorPrimo < numerosPrimos[index5]) {
+        maiorPrimo = numerosPrimos[index5];
     }
 }
 
