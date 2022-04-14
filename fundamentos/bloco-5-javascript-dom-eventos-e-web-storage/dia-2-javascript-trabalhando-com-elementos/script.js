@@ -15,3 +15,16 @@ section.className = 'center-content';
 main.appendChild(section);
 
 // exercício 4
+let paragraph = document.createElement('p');
+paragraph.innerText = 'Criando elementos com JavaScript, oh yeah!'
+section.appendChild(paragraph);
+
+// exercício 5
+let leftSection = document.createElement('section');
+section.className = 'left-content';
+main.appendChild(leftSection);
+
+// exercício 6
+let rightSection = document.createElement('section');
+rightSection.className = 'right-content'
+main.appendChild(rightSection);
