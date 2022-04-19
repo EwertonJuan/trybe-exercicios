@@ -101,3 +101,24 @@ btnFriday.addEventListener('click', function (event){
     }
   }
 })
+
+// Exercício 6
+
+days.addEventListener('mouseover', function (event) {
+  event.target.style.fontSize = '120%';
+})
+
+days.addEventListener('mouseout', function (event) {
+  event.target.style.fontSize = '20px';
+})
+
+// Exercício 7
+
+function addNewTask (task) {
+  let myTasks = document.getElementsByClassName('my-tasks');
+  let newTask = document.createElement('span');
+  newTask.innerText = task;
+  myTasks[0].appendChild(newTask);
+}
+
+addNewTask('Cozinhar')
