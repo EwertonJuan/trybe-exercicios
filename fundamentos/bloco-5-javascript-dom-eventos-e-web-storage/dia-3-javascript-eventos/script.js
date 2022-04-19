@@ -114,11 +114,50 @@ days.addEventListener('mouseout', function (event) {
 
 // Exercício 7
 
+let myTasks = document.getElementsByClassName('my-tasks');
+
 function addNewTask (task) {
-  let myTasks = document.getElementsByClassName('my-tasks');
   let newTask = document.createElement('span');
   newTask.innerText = task;
   myTasks[0].appendChild(newTask);
 }
 
 addNewTask('Cozinhar')
+
+// Exercício 8
+
+function addSubtitle (color) {
+  let subtitle = document.createElement('div');
+  myTasks[0].appendChild(subtitle)
+  subtitle.style.backgroundColor = color;
+}
+
+addSubtitle('green')
+
+// Exercício 9
+
+let divClicks = 0;
+addEventListener('click', function (event) {
+  if (event.type === 'click') {
+    divClicks += 1;
+  }
+  event.target.className = 'task selected';
+  if (divClicks !== 0 && divClicks % 2 === 0) {
+    event.target.className = 'task'
+  }
+})
+
+// Exercício 10
+
+let taskSelected = document.getElementsByClassName('selected');
+console.log(taskSelected.style.backgroundColor);
+let dayClicks = 0;
+days.addEventListener('click', function (event) {
+  if (event.type === 'click') {
+    dayClicks += 1;
+  }
+  event.target.style.backgroundColor = taskSelected.style.backgroundColor;
+  if (dayClicks !== 0 && dayClicks % 2 === 0) {
+    event.target.style.backgroundColor = 'rgb(119,119,119)';
+  }
+})
