@@ -1,0 +1,25 @@
+body {
+    background-color: #036b52;
+}
+
+main {
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 5px;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 40px;
+    background-color: rgb(240, 240, 240);
+}
+
+#first-div {
+    margin-top: 10px;
+}
+
+#page-header {
+    color: white;
+    margin-top: 10px;
+}
+
+.form-check, .form-switch {
+    margin: auto 5px;
+}
