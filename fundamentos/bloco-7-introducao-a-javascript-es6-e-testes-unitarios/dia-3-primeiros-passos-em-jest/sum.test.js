@@ -1,5 +1,5 @@
 // Exercício 1
-const sum = require('./sum');
+const { sum, myRemove } = require('./sum');
 
 describe ('Testes na função sum', () => {
     test ('Somando 4 + 5 se obtem 9', () => {
@@ -12,5 +12,21 @@ describe ('Testes na função sum', () => {
 
     test ('Usando string, retorna erro', () => {
         expect(() => sum(4, '5')).toThrow('parameters must be numbers');
+    });
+});
+
+// Exercício 2
+
+describe ('Testes na função myRemove', () => {
+    test ('Remove número 3', () => {
+        expect(myRemove([1, 2, 3, 4], 3)).toStrictEqual([1, 2, 4]);
+    });
+
+    test ('Não retorna o 3', () => {
+        expect(myRemove([1, 2, 3, 4], 3)).not.toStrictEqual([1, 2, 3, 4]);
+    });
+
+    test ('Não retorna o 5', () => {
+        expect(myRemove([1, 2, 3, 4], 5)).toStrictEqual([1, 2, 3, 4]);
     });
 });
