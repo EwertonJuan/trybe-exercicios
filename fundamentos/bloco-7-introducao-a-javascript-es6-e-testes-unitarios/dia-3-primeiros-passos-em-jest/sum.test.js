@@ -1,5 +1,5 @@
 // Exercício 1
-const { sum, myRemove } = require('./sum');
+const { sum, myRemove, myFizzBuzz } = require('./sum');
 
 describe ('Testes na função sum', () => {
     test ('Somando 4 + 5 se obtem 9', () => {
@@ -28,5 +28,29 @@ describe ('Testes na função myRemove', () => {
 
     test ('Não retorna o 5', () => {
         expect(myRemove([1, 2, 3, 4], 5)).toStrictEqual([1, 2, 3, 4]);
+    });
+});
+
+// Exercício 3
+
+describe ('Testes na função myFizzBuzz', () => {
+    test ('15 retorna fizzbuzz', () => {
+        expect(myFizzBuzz(15)).toBe('fizzbuzz');
+    });
+
+    test ('9 retorna fizz', () => {
+        expect(myFizzBuzz(9)).toBe('fizz');
+    });
+
+    test ('10 retorna buzz', () => {
+        expect(myFizzBuzz(10)).toBe('buzz');
+    });
+
+    test ('7 retorna fizzbuzz', () => {
+        expect(myFizzBuzz(7)).toBe(7);
+    });
+
+    test ('String retorna false', () => {
+        expect(myFizzBuzz('15')).toBe(false);
     });
 });
