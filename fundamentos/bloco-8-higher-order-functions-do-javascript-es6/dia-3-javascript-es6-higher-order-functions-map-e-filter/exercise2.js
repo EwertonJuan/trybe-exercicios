@@ -61,4 +61,15 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+const nameAndAge = books.map((book) => {
+  const objects = {
+    age: (book.releaseYear - book.author.birthYear),
+    author: book.author.name,
+  };
+  return objects;
+})
+
+nameAndAge.sort((a, b) => a.age - b.age);
+// console.log(nameAndAge);
+
+module.exports = { nameAndAge }
