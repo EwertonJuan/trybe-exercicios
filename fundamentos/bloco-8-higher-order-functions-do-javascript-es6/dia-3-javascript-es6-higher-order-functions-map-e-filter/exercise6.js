@@ -61,4 +61,7 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+const verifyAge = books.filter((book) => (2022 - book.releaseYear) >= 60);
+const oldBooks = verifyAge.map((book) => book.name);
+console.log(oldBooks);
+module.exports = { oldBooks }
