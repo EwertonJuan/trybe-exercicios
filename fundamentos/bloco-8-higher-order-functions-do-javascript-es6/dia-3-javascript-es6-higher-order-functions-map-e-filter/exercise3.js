@@ -60,5 +60,7 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  // Adicione o código do exercício aqui:
+
+const fantasyOrScienceFiction = books.filter((book) => book.genre === 'Fantasia' || book.genre === 'Ficção Científica');  
+
+module.exports = { fantasyOrScienceFiction }
