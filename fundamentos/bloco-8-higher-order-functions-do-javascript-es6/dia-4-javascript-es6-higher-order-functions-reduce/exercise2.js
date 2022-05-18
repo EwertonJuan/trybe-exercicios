@@ -61,4 +61,14 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+const reduceNames = books.reduce((acc, book, index) => {
+  if (index === 0) {
+    return `${book.author.name}`;
+  } else if (index === books.length - 1) {
+    return `${acc}, ${book.author.name}.`
+  } else {
+    return `${acc}, ${book.author.name}`
+  }
+}, '');
+//console.log(reduceNames);
+module.exports = { reduceNames }
