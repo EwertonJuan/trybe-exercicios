@@ -60,5 +60,10 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
-  // Adicione o código do exercício aqui:
+
+const averageAge = () => {
+  const totalAge = books.reduce((acc, book) => acc + (book.releaseYear - book.author.birthYear), 0);
+  return totalAge / books.length;
+}
+
+module.exports = { averageAge }
