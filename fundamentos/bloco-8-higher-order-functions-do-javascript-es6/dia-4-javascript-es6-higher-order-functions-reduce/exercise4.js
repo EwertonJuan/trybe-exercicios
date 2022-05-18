@@ -61,4 +61,6 @@ const books = [
     },
   ];
   
-  // Adicione o código do exercício aqui:
+const longestNamedBook = books.reduce((acc, book) => (acc.name.length > book.name.length) ? acc : book);
+
+module.exports = { longestNamedBook }
