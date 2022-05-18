@@ -61,12 +61,4 @@ const books = [
     },
   ];
   
-//const authorWith3DotsOnName = books.filter((book) => {
-//});
-books.forEach((book) => {
-  const names = book.author.name;
-  
-  console.log(names.match(/./g));
-})
-  
-//module.exports = { authorWith3DotsOnName }
+  // Adicione o código do exercício aqui:
