@@ -1,0 +1,30 @@
+const estados = [
+    'AC',
+    'AM',
+    'AL',
+    'AP',
+    'BA',
+    'CE',
+    'DF',
+    'ES',
+    'GO',
+    'MA',
+    'MS',
+    'MT',
+    'PA',
+    'PB',
+    'PE',
+    'PI',
+    'PR',
+    'RJ',
+    'RN',
+    'RO',
+    'RR',
+    'RS',
+    'SC',
+    'SE',
+    'SP',
+    'TO'
+]
+
+export default estados;
